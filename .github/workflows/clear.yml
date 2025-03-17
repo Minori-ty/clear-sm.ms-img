@@ -1,0 +1,20 @@
+name: Run index.js every 7 days
+
+on:
+    schedule:
+        - cron: '0 0 */7 * *' # 每 7 天执行一次，每天的 00:00
+
+jobs:
+    run-script:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20 # 可以根据需要选择合适的 Node.js 版本
+
+            - name: Run index.js
+              run: node index.js
