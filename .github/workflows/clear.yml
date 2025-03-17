@@ -20,4 +20,7 @@ jobs:
                   node-version: 20 # 可以根据需要选择合适的 Node.js 版本
 
             - name: Run index.js
+              env:
+                  Authorization: ${{ secrets.Authorization }}
+                  TEST: ${{ secrets.TEST }}
               run: node index.js
