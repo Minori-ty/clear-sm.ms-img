@@ -1,4 +1,5 @@
 const Authorization = process.env.Authorization
+console.log(process.env.TEST)
 
 async function deleteImages(hash) {
     const res = await fetch(`https://sm.ms/api/v2/delete/${hash}`, {
@@ -12,6 +13,8 @@ async function getAllImages() {
         headers: { Authorization },
     })
     const json = await res.json()
+    console.log(json)
+
     return json.data
 }
 
