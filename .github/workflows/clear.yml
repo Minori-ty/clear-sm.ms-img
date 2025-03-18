@@ -22,5 +22,4 @@ jobs:
             - name: 运行index.js
               env:
                   Authorization: ${{ secrets.Authorization }}
-                  TEST: ${{ secrets.TEST }}
               run: node index.js
