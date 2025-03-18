@@ -5,7 +5,7 @@ on:
         branches:
             - main
     schedule:
-        - cron: '0 0 */7 * *' # 每 7 天执行一次，每天的 00:00
+        - cron: '0 0 * * 1' # 每周一执行一次，每天的 00:00
 
 jobs:
     run-script:
